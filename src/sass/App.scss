@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body, #root {
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@import 'text';
+@import 'main';
+@import 'links';
+@import 'nav';
+@import 'header';
+@import 'display-grid';
+@import 'grid-item';

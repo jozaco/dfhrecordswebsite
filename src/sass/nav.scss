@@ -1,0 +1,15 @@
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

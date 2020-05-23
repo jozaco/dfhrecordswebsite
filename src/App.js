@@ -1,19 +1,32 @@
 import React from 'react';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Main from './Main';
+import Artistes from './Artistes';
+import Header from './Header';
+
+import './sass/App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <nav></nav>
-      </header>
-      <div className="main">
-        <img src="assets/images/logo.png" alt="DFH Records" />
-        <p>
-          <a href="mailto:woof@dfhrecords.com" title="Write us an email">woof@dfhrecords.com</a>
-        </p>
+    <Router>
+      <div className="App">
+        <Header />
+        <div className="main">
+          <Switch>
+            <Route exact path="/">
+              <Main />
+            </Route>
+            <Route path="/artistes">
+              <Artistes />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
