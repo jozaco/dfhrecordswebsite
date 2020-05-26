@@ -4,7 +4,10 @@ function GridItem({ content }) {
 
     return (
         <div className="grid-item">
-            <div className="item-name">
+            <div className="grid-item-image">
+                <img src={content.imatge} alt={content.nom} />
+            </div>
+            <div className="grid-item-name">
                 {content.nom}
             </div>
         </div>

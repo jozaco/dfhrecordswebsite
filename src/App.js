@@ -16,14 +16,16 @@ function App() {
       <div className="App">
         <Header />
         <div className="main">
-          <Switch>
-            <Route exact path="/">
-              <Main />
-            </Route>
-            <Route path="/artistes">
-              <Artistes />
-            </Route>
-          </Switch>
+          <div class="container">
+            <Switch>
+              <Route exact path="/">
+                <Main />
+              </Route>
+              <Route path="/artistes">
+                <Artistes />
+              </Route>
+            </Switch>
+          </div>
         </div>
       </div>
     </Router>

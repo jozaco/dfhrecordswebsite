@@ -1,0 +1,38 @@
+$palettes: (
+    basic: (
+        base: #fff,
+        light: #fff,
+        dark: #000
+    ),
+    purplish: (
+        base: #821E6C,
+        light: lighten(#821E6C, 10%),
+        dark: darken(#821E6C, 10%)
+    ),
+    grayish: (
+        base: #ddd,
+        light: lighten(#ddd, 10%),
+        dark: darken(#ddd, 10%)
+    )
+);
+
+$text-basic: map-get(map-get($palettes, basic), dark);
+
+$text-primary: map-get(map-get($palettes, purplish), base);
+
+$background-basic: map-get(map-get($palettes, basic), base);
+
+$background-primary: map-get(map-get($palettes, purplish), base);
+$background-primary-hover: map-get(map-get($palettes, purplish), light);
+
+$background-secondary: map-get(map-get($palettes, grayish), base);
+$background-secondary-hover: map-get(map-get($palettes, grayish), light);
+
+$border-basic: map-get(map-get($palettes, basic), base);
+$border-primary: map-get(map-get($palettes, purplish), base);
+$border-secondary: map-get(map-get($palettes, grayish), base);
+
+$link-primary: map-get(map-get($palettes, purplish), base);
+
+$screen-xs: 320px;
+$screen-xs-max: 736px;

@@ -1,0 +1,15 @@
+.panel {
+    padding: 1rem;
+    
+    &.panel-small {
+        width: 30%;
+    }
+    &.panel-medium {
+        width: 50%;
+
+        @media screen and (max-width: $screen-xs-max) {
+            width: 90%;
+        }
+        
+    }
+}

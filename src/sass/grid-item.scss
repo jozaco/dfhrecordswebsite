@@ -1,8 +1,35 @@
 .grid-item {
-    padding: 2rem;
-    border: 1px solid #fff;
-    
+
+    margin: 1rem;
+
     &:hover {
         cursor: pointer;
+       
+        .grid-item-image {
+            background-color: $background-primary-hover;
+            transition: background-color 0.4s ease;
+            img {
+                opacity: 0.8;
+            }
+        }
+
+        .grid-item-name {
+            color: $text-primary;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+    }
+
+    .grid-item-image {
+        height: 250px;
+
+        img {
+            transition: opacity 0.4s ease;
+        }
+    }
+    .grid-item-name {
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.2s ease;
     }
 }

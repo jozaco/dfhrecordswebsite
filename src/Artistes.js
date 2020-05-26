@@ -7,20 +7,23 @@ const getArtistes = () => {
         {
             id: '0',
             nom: 'Violeta Tello Grau',
-            link: 'https://violeta.bandcamp.com'
+            link: 'https://violeta.bandcamp.com',
+            imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
         },
         {
             id: '1',
             nom: 'Motuo',
-            link: 'https://soymotuo.bandcamp.com'
+            link: 'https://soymotuo.bandcamp.com',
+            imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
         },
         {
             id: '2',
             nom: 'Moondown',
-            link: 'https://moondown.bandcamp.com'
+            link: 'https://moondown.bandcamp.com',
+            imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
         },
     ];
-    //artistes = [];
+    artistes = [];
     return artistes;
 }
 
