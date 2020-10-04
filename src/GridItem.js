@@ -5,7 +5,7 @@ function GridItem({ content }) {
     return (
         <div className="grid-item">
             <div className="grid-item-image">
-                <img src={content.imatge} alt={content.nom} />
+                <img src={`assets/images/${content.parent}/${content.id}/${content.id}.png`} alt={content.nom} />
             </div>
             <div className="grid-item-name">
                 {content.nom}

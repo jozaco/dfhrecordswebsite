@@ -1,14 +1,41 @@
-nav {
-    ul {
+.nav {
+    width: 100%;
+    padding: 0.5rem;
+    .nav-menu {
         margin: 0;
         padding: 0;
-        li {
+        display: flex;
+
+        .nav-menu-item {
             list-style-type: none;
-            a {
+            padding: 0.5rem 1.1rem;
+            position: relative;
+
+            &::before {
+                content: '';
+            }
+
+            .nav-menu-item-link {
+                color: $nav-menu-item;
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 1.2rem;
+            }
+
+            &:hover {
+                
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0.7rem;
+                    content: url('/assets/images/bullet.png');
+                    transition: all 0.2 ease;
+                }
+
+                .nav-menu-item-link {
+                    color: $nav-menu-item-hover;
+                }
             }
         }
     }

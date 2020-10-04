@@ -1,15 +1,99 @@
 .main {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
 .container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1290px;
     margin: 0 auto;
 }
+
+.flex {
+    display: flex;
+
+    &.half {
+        flex: 2;
+    }
+
+    &.third {
+        flex: 3;
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+
+//Marings and paddings
+
+.mlm {
+    margin-left: 3rem;
+}
+
+.mrm {
+    margin-right: 3rem;
+}
+
+//Flex mixins
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+  }
+  
+  .wrapper {
+    @include flexbox();
+  }
+  
+  .item {
+    @include flex(1 200px);
+    @include order(2);
+  }

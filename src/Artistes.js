@@ -5,12 +5,10 @@ import DisplayGrid from './DisplayGrid';
 const getArtistes = () => {
     let artistes = [
         {
-            id: '0',
+            id: 'violeta_tello_grau',
             nom: 'Violeta Tello Grau',
-            link: 'https://violeta.bandcamp.com',
-            imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
         },
-        {
+        /*{
             id: '1',
             nom: 'Motuo',
             link: 'https://soymotuo.bandcamp.com',
@@ -21,9 +19,14 @@ const getArtistes = () => {
             nom: 'Moondown',
             link: 'https://moondown.bandcamp.com',
             imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
-        },
+        },*/
     ];
-    artistes = [];
+    //artistes = [];
+
+    artistes.forEach((artista) => {
+        artista.parent = 'artistes'
+    });
+
     return artistes;
 }
 

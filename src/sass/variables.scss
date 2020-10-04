@@ -16,10 +16,13 @@ $palettes: (
     )
 );
 
+// Text vars
 $text-basic: map-get(map-get($palettes, basic), dark);
-
 $text-primary: map-get(map-get($palettes, purplish), base);
+$font-size: 16px;
 
+
+//Background vars
 $background-basic: map-get(map-get($palettes, basic), base);
 
 $background-primary: map-get(map-get($palettes, purplish), base);
@@ -32,7 +35,15 @@ $border-basic: map-get(map-get($palettes, basic), base);
 $border-primary: map-get(map-get($palettes, purplish), base);
 $border-secondary: map-get(map-get($palettes, grayish), base);
 
+
+//Nav vars
+$nav-menu-item: map-get(map-get($palettes, purplish), base);
+$nav-menu-item-hover: map-get(map-get($palettes, purplish), light);
+
+//Links vars
 $link-primary: map-get(map-get($palettes, purplish), base);
 
+
+//Breakpoints vars
 $screen-xs: 320px;
 $screen-xs-max: 736px;
