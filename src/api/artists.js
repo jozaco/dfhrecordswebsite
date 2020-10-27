@@ -1,9 +1,11 @@
-import { getCollection } from './config';
+import { db } from './config';
 
-const getArtistes = () => {
-    return getCollection('artistes');
-}
+export default {
+    artistes: 'artistes',
 
-export {
-    getArtistes,
+    documents(url) {
+        return {
+            getAll: () => db.collection(url).get(),
+        }
+    }
 }

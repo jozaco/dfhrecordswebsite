@@ -2,22 +2,31 @@ import React from 'react';
 import GridItem from './GridItem';
 import { Link } from 'react-router-dom';
 
-function DisplayGrid(props) {
+class DisplayGrid extends React.Component {
 
-    return (
-        <div className="grid-container">
-            {props.content.length !== 0 ?
+    constructor(props) {
+        super(props);
+        this.state = {
+            props: props
+        };
+    }
 
-                props.content.map((item, i) =>
-                    <Link to={`/${item.parent}/${item.id}`} key={i}>
-                        <GridItem content={item} />
-                    </Link>
+    render() {
+        return (
+            <div className="grid-container">
+                {this.state.props.content.length !== 0 ?
 
-                )
-                : 'Molt aviat!'
-            }
-        </div>
-    )
+                    this.state.props.content.map((item, i) =>
+                        <Link to={`/${item.parent}/${item.id}`} key={i}>
+                            <GridItem content={item} />
+                        </Link>
+
+                    )
+                    : 'Molt aviat!'
+                }
+            </div>
+        )
+    }
 }
 
 export default DisplayGrid;

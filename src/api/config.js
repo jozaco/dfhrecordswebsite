@@ -17,15 +17,17 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
-
+/* 
 const getCollection = (collection) => {
 
-    return db.collection(collection).get();
+    db.collection(collection).get().then((result) => {
+        return result;
+    });
 
 };
-
+ */
 export {
-    getCollection,
+    db,
 }
 
 

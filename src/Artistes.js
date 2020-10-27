@@ -1,11 +1,20 @@
 import React from 'react';
 import DisplayGrid from './DisplayGrid';
-import { getArtistes } from './api/artists';
+
+import api from './api/artists';
 
 
 const getAllArtistes = () => {
 
-    return getArtistes();
+    api.documents('artistes').getAll().then((result) => {
+        return result;
+    });
+
+    /*
+    const artistes = getArtistes();
+    console.log(artistes);
+*/
+
 
 
     /*let artistes = [
@@ -35,14 +44,23 @@ const getAllArtistes = () => {
      */
 }
 
-function Artistes(props) {
+class Artistes extends React.Component {
 
-    return (
-        <React.Fragment>
-            <h1>Artistes</h1>
-            <DisplayGrid content={getAllArtistes()} />
-        </React.Fragment>
-    );
+    constructor(props) {
+        super(props);
+        this.state = {
+            artistes: getAllArtistes()
+        }
+    }
+    render() {
+        return (
+            <React.Fragment>
+                <h1>Artistes</h1>
+                <DisplayGrid content={this.state.artistes} />
+            </React.Fragment>
+        );
+    }
+
 }
 
 export default Artistes;
