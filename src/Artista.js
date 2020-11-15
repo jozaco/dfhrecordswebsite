@@ -33,14 +33,14 @@ class Artista extends React.Component {
 
                 {this.state.document ?
                     <React.Fragment>
-                        <div className="flex third flex-column align-start mlm">
+                        <div className="flex third flex-column align-start prm plm">
 
-                            <h1>{this.state.document.nom}</h1>
-                            <p>{this.state.document.bio}</p>
+                            <h1 className="flex has-lines">{this.state.document.nom}</h1>
+                            <p className="light-gray-background">{this.state.document.bio}</p>
 
                             {this.getDiscografia() ?
                                 <React.Fragment>
-                                    <h2>Discografia</h2>
+                                    <h2 className="has-lines">Discografia</h2>
 
                                     <DisplayGrid collectionData={this.getDiscografia()} collection={`${api.artistes}/${this.state.document.id}/discografia`} />
                                 </React.Fragment>
@@ -49,7 +49,7 @@ class Artista extends React.Component {
 
                         </div>
                         <div className="flex flex-column align-start mlm mrm">
-                            <h2>Enllaços pràctics</h2>
+                            <h3>Enllaços pràctics</h3>
                             <LinksInline content={this.state.document.xarxes} title={this.state.document.nom} />
                         </div>
                         <div className="flex half overflow-hidden">

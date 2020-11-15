@@ -21,6 +21,10 @@ $text-basic: map-get(map-get($palettes, basic), dark);
 $text-primary: map-get(map-get($palettes, purplish), base);
 $font-size: 16px;
 
+//Headings
+
+$h1-base: map-get(map-get($palettes, basic), dark);
+$h2-base: map-get(map-get($palettes, basic), dark);
 
 //Background vars
 $background-basic: map-get(map-get($palettes, basic), base);
@@ -33,6 +37,7 @@ $background-secondary-hover: map-get(map-get($palettes, grayish), light);
 
 $border-basic: map-get(map-get($palettes, basic), base);
 $border-primary: map-get(map-get($palettes, purplish), base);
+$border-primary-light: map-get(map-get($palettes, purplish), light);
 $border-secondary: map-get(map-get($palettes, grayish), base);
 
 

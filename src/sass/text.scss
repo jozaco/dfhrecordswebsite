@@ -10,3 +10,40 @@ html {
         
     }
 }
+
+h1 {
+    color: $h1-base;
+    text-transform: uppercase;
+    width: 100%;
+    position: relative;
+
+}
+
+h2 {
+    text-transform: uppercase;
+    color: $h2-base;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.has-lines {
+    border-top: .2rem solid $border-secondary;
+    border-bottom: .2rem solid $border-secondary;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    &::after{
+        content:url('/assets/images/bullet.png');
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0;
+    }
+}
+
+p {
+    text-align: left;
+    line-height: 2rem;
+    padding: 1rem;
+}

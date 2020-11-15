@@ -63,6 +63,14 @@
     margin-right: 3rem;
 }
 
+.plm {
+    padding-left: 3rem;
+}
+
+.prm {
+    padding-right: 3rem;
+}
+
 //Flex mixins
 
 @mixin flexbox() {
