@@ -3,26 +3,31 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-} from "react-router-dom";
+} from 'react-router-dom';
 import Main from './Main';
 import Artistes from './Artistes';
 import Header from './Header';
+import Artista from './Artista';
 
 import './sass/App.scss';
 
 function App() {
+
   return (
     <Router>
       <div className="App">
         <Header />
         <div className="main">
-          <div class="container">
+          <div className="container flex-column space-between">
             <Switch>
-              <Route exact path="/">
-                <Main />
+              <Route path="/artistes/:artistId">
+                <Artista />
               </Route>
-              <Route path="/artistes">
+              <Route exact path="/artistes">
                 <Artistes />
+              </Route>
+              <Route path="/">
+                <Main />
               </Route>
             </Switch>
           </div>
