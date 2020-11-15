@@ -9,7 +9,7 @@ function LinksInline(props) {
         <ul className="inline unstyled">
             {props.content.map((linkItem, i) =>
                 <li className="list-item" key={i}>
-                    <a href={linkItem.link} title={`${props.title} ${linkItem.name}`} target="_blank" rel="noopener noreferrer">{linkItem.name}</a>
+                    <a href={linkItem.url} title={`${props.title} ${linkItem.nom}`} target="_blank" rel="noopener noreferrer">{linkItem.nom}</a>
                 </li>
             )}
         </ul>

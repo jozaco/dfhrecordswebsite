@@ -6,6 +6,7 @@ export default {
     documents(url) {
         return {
             getAll: () => db.collection(url).get(),
+            getItem: (item) => db.collection(url).doc(item).get(),
         }
     }
 }
