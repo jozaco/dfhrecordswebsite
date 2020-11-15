@@ -9,81 +9,36 @@ class DisplayGrid extends React.Component {
         super(props);
         this.state = { ...props };
         this.getData = this.getData.bind(this);
-
-        console.log(this.state);
     }
 
     getData(document) {
-
-        let data = [];
-
-        api.documents('artistes').getAll().then((result) => {
+        api.documents(document).getAll().then((result) => {
+            let data = [];
             result.forEach((doc) => {
-
                 data.push(doc.data());
             })
-            console.log(data);
-
-            return data;
+            this.setState({ collectionData: data });
         });
-
-        /*
-        const artistes = getArtistes();
-        console.log(artistes);
-    */
-
-
-
-        /*let artistes = [
-            {
-                id: 'violeta_tello_grau',
-                nom: 'Violeta Tello Grau',
-            },
-            {
-                id: '1',
-                nom: 'Motuo',
-                link: 'https://soymotuo.bandcamp.com',
-                imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
-            },
-            {
-                id: '2',
-                nom: 'Moondown',
-                link: 'https://moondown.bandcamp.com',
-                imatge: 'assets/images/artistes/violeta_tello_grau/violeta_tello_grau.png'
-            },
-        ];
-        */
-        //artistes = [];
-        /* 
-            artistes.forEach((artista) => {
-                artista.parent = 'artistes'
-            });
-         */
     }
 
     componentDidMount() {
-
-        this.setState({ collectionData: this.getData(this.state.collection) });
-        console.log(this.state);
-        //console.log(collection);
+        this.getData(this.state.collection);
     }
-
 
     render() {
 
         return (
             <div className="grid-container">
-                {/* {this.state.props.collection.length !== 0 ?
+                {this.state.collectionData && this.state.collectionData.length !== 0 ?
 
-                    this.state.props.collection.map((item, i) =>
-                        <Link to={`/${item.parent}/${item.id}`} key={i}>
-                            <GridItem content={item} />
+                    this.state.collectionData.map((item, i) =>
+                        <Link to={`/${this.state.collection}/${item.id}`} key={i}>
+                            <GridItem content={item} parent={this.state.collection} />
                         </Link>
 
                     )
                     : 'Molt aviat!'
-                } */}
-                Molt aviat!
+                }
             </div>
         )
     }
